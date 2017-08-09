@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/MotusKPISys/!svn/ver/2/Industry4.0/src/com/motus/dao
+END
+DrawingDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/MotusKPISys/!svn/ver/2/Industry4.0/src/com/motus/dao/DrawingDAO.java
+END
+DrawingDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/MotusKPISys/!svn/ver/2/Industry4.0/src/com/motus/dao/DrawingDaoImpl.java
+END
+PartDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/MotusKPISys/!svn/ver/2/Industry4.0/src/com/motus/dao/PartDAO.java
+END
+ProjectDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/MotusKPISys/!svn/ver/2/Industry4.0/src/com/motus/dao/ProjectDAO.java
+END
+LoginDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/MotusKPISys/!svn/ver/2/Industry4.0/src/com/motus/dao/LoginDAO.java
+END
+PartDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/MotusKPISys/!svn/ver/2/Industry4.0/src/com/motus/dao/PartDaoImpl.java
+END
+ProjectDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/MotusKPISys/!svn/ver/2/Industry4.0/src/com/motus/dao/ProjectDaoImpl.java
+END
+HibernateSessionFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/MotusKPISys/!svn/ver/2/Industry4.0/src/com/motus/dao/HibernateSessionFactory.java
+END
+BaseDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/MotusKPISys/!svn/ver/2/Industry4.0/src/com/motus/dao/BaseDao.java
+END
+LoginDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/MotusKPISys/!svn/ver/2/Industry4.0/src/com/motus/dao/LoginDaoImpl.java
+END

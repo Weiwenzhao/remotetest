@@ -1,0 +1,34 @@
+function dowmloadImg() {
+	var tid_check = new Array();
+	var tid_name = new Array();
+	var tids = new Array();
+	var i = 0;
+	var len = $("#table_drawing_part").find("tr").length - 2; //行数
+	$("#table_drawing_part tr").find("td:first input:checkbox").each(function() {
+		var ischecked = $(this).prop("checked");
+		tid_check[i] = ischecked;
+		i++;
+	});
+	console.log(tid_check);
+	var k=0;
+	for(var j = 0; j < len; j++) {
+		if(tid_check[j]) {
+			tids[k] = $("#table_drawing_part").find("tr").eq(j + 2).find("td").eq(1).text(); // 注意-1是因为index从0开始计数
+			k++;
+		}
+	}
+	console.log(tid_name)
+	var data = JSON.stringify(tids);
+	$("#drawing_part_form").submit();
+//	console.log(data);
+//		$.ajax({
+//			type: "post",			
+//			cache: false,
+//			responseType: 'arraybuffer',
+//			data: {data: data},
+//			url: "printDrawingImg",
+//			success: function(data) {
+//				console.log("打印成功！");
+//			}
+//		});
+}

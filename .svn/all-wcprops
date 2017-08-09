@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/MotusKPISys/!svn/ver/1/Industry4.0
+END
+.myhibernatedata
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/MotusKPISys/!svn/ver/2/Industry4.0/.myhibernatedata
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/MotusKPISys/!svn/ver/2/Industry4.0/.classpath
+END
+.mystrutsdata
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/MotusKPISys/!svn/ver/2/Industry4.0/.mystrutsdata
+END
+.mymetadata
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/MotusKPISys/!svn/ver/2/Industry4.0/.mymetadata
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/MotusKPISys/!svn/ver/2/Industry4.0/.project
+END
+hibernate.reveng.xml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/MotusKPISys/!svn/ver/2/Industry4.0/hibernate.reveng.xml
+END
+info_zh_CN.properties
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/MotusKPISys/!svn/ver/2/Industry4.0/info_zh_CN.properties
+END

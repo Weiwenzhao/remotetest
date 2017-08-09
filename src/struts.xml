@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="" extends="struts-default">
+		<action name="exportExcel" class="com.motus.action.ExportExcel" method="CreateExcel">
+			<result name="success" type="stream">
+			  <param name="contentType">application/vnd.ms-excel</param>  
+			  <param name="inputName">excelStream</param>  
+           <!--   <param name="contentDisposition">attachment;filename=${excelFileName}</param>-->
+                <param name="bufferSize">2048</param>  
+			</result>
+			<result name="input">/drawing_view.jsp</result>
+   		 </action> 
+   		 
+   		 <action name="downloadImg" class="com.motus.action.DownloadImg" >
+    		<result name="success" type="stream"> 
+    		 	 <!-- 下载文件类型定义 -->
+               <!--   <param name="contentType">application/octet-stream</param>--> 
+                 <!-- 下载文件输出流定义 -->
+              <param name="inputName">fileInputStream</param>　　　　　　　　　　　
+                 　　　　　       <!-- 下载文件处理方式 --> 　　　　　　　　　　　　　　　
+             <!--     <param name="contentDisposition">attachment;fileName="${fileName}"</param> -->
+                 <!-- 下载文件的缓冲大小 -->
+                 <param name="bufferSize">4096</param>
+			</result>
+   		 </action>
+   		 
+   		  <action name="drawingAction" class="com.motus.action.DrawingAction" >	
+    		<result name="success">jsp/design/uploadDrawing.jsp</result>
+    		<result name="input">jsp/design/uploadDrawing.jsp</result>
+   		 </action>   		 
+   		  <action name="projectAction" class="com.motus.action.ProjectAction">
+    		<result name="success">/jsp/project/project.jsp</result>
+    		<result name="input">/jsp/project/index.jsp</result>
+   		 </action>
+   		 <action name="addAttachment" class="com.motus.action.ProjectAction" method="AddAttachment">
+    		<result name="success">/jsp/project/project_detail.jsp</result>
+    		<result name="input">/jsp/project/project_attach.jsp</result>
+   		 </action>
+   		 <action name="deleteAtt" class="com.motus.action.ProjectAction" method="DeldAttachment">
+    		<result name="success">/jsp/project/project_detail.jsp</result>
+   		 </action>
+   		<action name="workerAction" class="com.motus.action.WorkerAction">
+    		<result name="success">/jsp/manu/worker.jsp</result>
+    		<result name="input">/jsp/manu/worker.jsp</result>
+   		 </action>
+   		 <action name="loginAction" class="com.motus.action.LoginAction">
+   		 	<result name="worker">/jsp/manu/worker.jsp</result>
+   		 	<result name="design">/jsp/design/design.jsp</result>
+   		 	<result name="plan">/jsp/project/project.jsp</result>
+   		 	<result name="input">/login.jsp</result>
+   		 	<result name="workerManager">/jsp/manu/project_view.jsp</result>
+   		 </action>
+	</package>
+   	<package name="json" extends="json-default">
+   		  <action name="getProjectItem" class="com.motus.action.UtilAction" method="GetProject">
+    		<result name="success" type="json"> 
+ 				<param name="root">project</param>
+			</result>
+   		 </action>
+   		 <action name="getProjectInfo" class="com.motus.action.UtilAction" method="GetProjectInfo">
+    		<result name="success" type="json"> 
+ 				<param name="root">projectInfo</param>
+			</result>
+   		 </action>
+   		 
+   		<action name="getDrawing" class="com.motus.action.UtilAction" method="GetDrawing">
+    		<result name="success" type="json"> 
+ 				<param name="root">drawing</param>
+			</result>
+   		 </action>
+   		 <action name="getProject" class="com.motus.action.UtilAction" method="GetAttach">
+    		<result name="success" type="json"> 
+ 				<param name="root">attachment</param>
+			</result>
+   		 </action>
+   		<action name="printDrawingImg" class="com.motus.action.UtilAction" method="DownloadRQImage">
+    		<result name="success" type="stream"> 
+    		 	 <!-- 下载文件类型定义 -->
+                 <param name="contentType">application/octet-stream</param>
+                 <!-- 下载文件输出流定义 -->
+                 <param name="inputName">inputStream</param>　　　　　　　　　　　　　
+                 　　　　　       <!-- 下载文件处理方式 --> 　　　　　　　　　　　　　　　
+                 <param name="contentDisposition">attachment;filename="${fileName}"</param>
+                 <!-- 下载文件的缓冲大小 -->
+                 <param name="bufferSize">4096</param>
+			</result>
+   		 </action>
+   	   	</package>
+</struts>    

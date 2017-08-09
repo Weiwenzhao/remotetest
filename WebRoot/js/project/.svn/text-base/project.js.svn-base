@@ -1,0 +1,15 @@
+function form_submit() {
+				console.log($("#pid").val());
+				if($("#pid").val() == "") {
+				 console.log("123");
+					$("#msg_id").html("<font color=red>请输入项目编号！</font>");
+					$("#pid").focus();
+					return false;
+				}
+				if($("#pname").val() == "") {
+					$("#msg_name").html(" <font color=red>请输入项目名称！</font>");
+				  $("#pid").focus();
+					return false;
+				}
+				document.getElementById('tab').submit();
+			}

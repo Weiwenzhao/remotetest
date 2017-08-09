@@ -1,0 +1,50 @@
+package com.motus.service;
+
+import java.util.List;
+
+import com.motus.dao.ProjectDaoImpl;
+import com.motus.vo.MotusDrawing;
+import com.motus.vo.MotusProject;
+
+public class ProjectService {
+	
+	ProjectDaoImpl projectDao = new ProjectDaoImpl();
+	/**
+	 * 项目信息逻辑处理类
+	 * @param project
+	 */
+	public boolean addProject(MotusProject project) {
+		// TODO Auto-generated method stub
+		
+		return projectDao.AddProject(project);
+	}
+	
+	public MotusProject GetProject(String id){
+		MotusProject project = new MotusProject();
+		project = projectDao.GetProject(id);
+		return project;
+		
+	}
+	/**
+	 * 项目单一性检测，判断项目是否存在
+	 * @param drawing
+	 */
+	public boolean SearchProject(String id){
+		MotusProject projectExist = null;
+		projectExist = projectDao.GetProject(id);
+		if(projectExist != null){
+			return true;   //图纸存在，返回存true 
+		}else{
+			return false; //图纸不存在，返回false
+		}
+	}
+	/**
+	 * 获取所有项目信息
+	 * @return
+	 */
+	public List<MotusProject> GetProjectItem(){
+		List<MotusProject> list = projectDao.GetProjectItem();
+		return list;
+		
+	}
+}
